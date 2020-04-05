@@ -1,4 +1,8 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
+@import "./components/pagination";
+
+@import "./modules/list.scss";
+
 @import "config";

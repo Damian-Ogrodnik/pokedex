@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { fetchPokemon } from "../../redux/data/dataUtils";
 
@@ -9,6 +9,7 @@ import { PokemonBoard } from "../PokemonBoard/PokemonBoard";
 import { Search } from "../Search";
 
 export const Pokedex = () => {
+  const pokemonArray = useSelector((store) => store.data.pokemon);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +20,7 @@ export const Pokedex = () => {
     <div>
       <Search />
       <PokemonBoard />
-      <Pagination />
+      <Pagination pokemonArray={pokemonArray} />
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.pagination {
+  @include flex-center;
+
+  &__item {
+    margin: 0 0.5rem;
+
+    &.active {
+      border: 1px solid red;
+    }
+  }
+
+  &__wrapper {
+    @include flex-center;
+  }
+}
