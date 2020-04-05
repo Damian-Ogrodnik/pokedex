@@ -2,7 +2,7 @@ import React from "react";
 
 export const Search = () => {
   return (
-    <div>
+    <div className="search">
       <input type="text" />
     </div>
   );

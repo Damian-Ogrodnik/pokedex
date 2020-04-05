@@ -28,6 +28,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+}
+
+.pokedex {
+  position: relative;
+  height: 95vh;
+  width: 95%;
+  border: 3px solid yellow;
 }
 
 ul {
@@ -56,6 +66,15 @@ ul {
 }
 
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #e8e8e8;
   height: 100vh;
 }

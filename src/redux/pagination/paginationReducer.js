@@ -20,6 +20,7 @@ const paginationReducer = (state = initialState, action) => {
     case types.PAGINATE_SUCCESS:
       return {
         ...state,
+        error: null,
         loading: false,
         paginatedPokemon: payload.paginatedPokemon,
       };

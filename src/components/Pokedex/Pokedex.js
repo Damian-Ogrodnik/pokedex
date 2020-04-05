@@ -17,7 +17,7 @@ export const Pokedex = () => {
   }, []);
 
   return (
-    <div>
+    <div className="pokedex">
       <Search />
       <PokemonBoard />
       <Pagination pokemonArray={pokemonArray} />
