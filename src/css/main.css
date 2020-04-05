@@ -1,3 +1,47 @@
+@-webkit-keyframes scaleCardUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes scaleCardUp {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes scaleCardDown {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleCardDown {
+  0% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,6 +112,15 @@
   background-color: #ffde00;
   -webkit-box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3), 0 0.9rem 0.75rem rgba(0, 0, 0, 0.22);
           box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3), 0 0.9rem 0.75rem rgba(0, 0, 0, 0.22);
+  -webkit-animation: scaleCardDown 0.5s forwards;
+          animation: scaleCardDown 0.5s forwards;
+}
+
+.pokemon-card:hover {
+  -webkit-transition: all 5 ease-in-out;
+  transition: all 5 ease-in-out;
+  -webkit-animation: scaleCardUp 0.5s forwards;
+          animation: scaleCardUp 0.5s forwards;
 }
 
 .search {

@@ -8,4 +8,10 @@
   background-color: $second-color;
   box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3),
     0 0.9rem 0.75rem rgba(0, 0, 0, 0.22);
+  animation: scaleCardDown 0.5s forwards;
+
+  &:hover {
+    transition: all 5 ease-in-out;
+    animation: scaleCardUp 0.5s forwards;
+  }
 }
