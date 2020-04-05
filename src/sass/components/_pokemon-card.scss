@@ -14,4 +14,8 @@
     transition: all 5 ease-in-out;
     animation: scaleCardUp 0.5s forwards;
   }
+
+  &__loading {
+    place-self: center;
+  }
 }

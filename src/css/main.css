@@ -42,6 +42,90 @@
   }
 }
 
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.error__icon {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+}
+
+.error p {
+  color: #cc0000;
+}
+
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loader img {
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation: loader 3s infinite;
+          animation: loader 3s infinite;
+}
+
+.loader p {
+  padding: 0.5rem;
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,6 +205,10 @@
   transition: all 5 ease-in-out;
   -webkit-animation: scaleCardUp 0.5s forwards;
           animation: scaleCardUp 0.5s forwards;
+}
+
+.pokemon-card__loading {
+  place-self: center;
 }
 
 .search {
