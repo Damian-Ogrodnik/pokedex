@@ -1,5 +1,5 @@
 import React from "react";
 
 export const PokemonBoard = () => {
-  return <div>PokoemonBoard</div>;
+  return <div>Pokoemon Board</div>;
 };
