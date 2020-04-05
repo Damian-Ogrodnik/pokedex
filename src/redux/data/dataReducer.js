@@ -19,7 +19,7 @@ const dataReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        companies: payload.pokemon,
+        pokemon: payload.pokemon,
       };
     case types.FETCH_POKEMON_FAILURE:
       return {
