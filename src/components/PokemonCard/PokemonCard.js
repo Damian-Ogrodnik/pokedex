@@ -3,8 +3,8 @@ import React from "react";
 export const PokemonCard = ({ name, url }) => {
   return (
     <div className="pokemon-card">
-      {name}
-      {url}
+      <p>{name}</p>
+      <p>{url}</p>
     </div>
   );
 };

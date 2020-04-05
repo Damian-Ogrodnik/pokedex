@@ -11,8 +11,5 @@
 
   &__wrapper {
     @include flex-center;
-    position: absolute;
-    width: 100%;
-    bottom: 1rem;
   }
 }

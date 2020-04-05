@@ -1,0 +1,7 @@
+.pokemon-card {
+  border: 1px solid green;
+  place-self: center;
+  @include flex-center-column;
+  width: 10rem;
+  height: 12rem;
+}
