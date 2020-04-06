@@ -24,8 +24,11 @@ export const PokemonCard = ({ name, url }) => {
       render={() => {
         return (
           <div className="pokemon-card">
-            <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
             <img src={imgPath} alt={`pokemon ${name}`} />
+            <div className="pokemon-card__details">
+              <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
+              <button>Details</button>
+            </div>
           </div>
         );
       }}

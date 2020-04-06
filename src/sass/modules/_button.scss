@@ -1,0 +1,16 @@
+button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: 0;
+  font-weight: 100;
+  border-radius: 1rem;
+  color: white;
+  border: none;
+  background-color: $background-color;
+  border: 0.15rem solid $second-background-color;
+
+  &:active {
+    transform: translateY(2px);
+    background-color: $second-color;
+  }
+}

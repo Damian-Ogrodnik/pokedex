@@ -1,11 +1,15 @@
 .pokemon-card {
-  border: 0.5rem solid $second-color;
+  display: flex;
+  border: 0.2rem solid $second-background-color;
   border-radius: 1rem;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   place-self: center;
-  @include flex-center-column;
-  width: 10rem;
-  height: 12rem;
+  width: 11rem;
+  height: 13rem;
   background-color: $second-color;
+  overflow: hidden;
   box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3),
     0 0.9rem 0.75rem rgba(0, 0, 0, 0.22);
   animation: scaleCardDown 0.5s forwards;
@@ -15,7 +19,30 @@
     animation: scaleCardUp 0.5s forwards;
   }
 
-  &__loading {
-    place-self: center;
+  img {
+    overflow: hidden;
+    background-color: white;
+    height: 8rem;
+    width: 100%;
+    border-bottom: 0.2rem solid $second-background-color;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    -webkit-box-shadow: inset 0px -32px 16px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: inset 0px -32px 16px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0px -32px 16px 0px rgba(0, 0, 0, 0.16);
+    p {
+      font-weight: 700;
+      margin: 0.5rem 0rem;
+    }
+
+    button {
+      width: 8rem;
+    }
   }
 }

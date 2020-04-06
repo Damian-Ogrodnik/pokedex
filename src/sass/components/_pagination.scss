@@ -5,7 +5,12 @@
     margin: 0 0.5rem;
 
     &.active {
-      border: 1px solid red;
+      button {
+        background-color: $second-background-color;
+        border: 0.25rem solid $second-color;
+        color: $second-color;
+        font-weight: 700;
+      }
     }
   }
 
