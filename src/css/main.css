@@ -99,6 +99,20 @@
   color: #3b4caa;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  margin: -1rem 0 0 12rem;
+  height: 5rem;
+}
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,17 +259,65 @@
   width: 8rem;
 }
 
+/* Base styling */
 .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 10vh;
+  margin-right: 5rem;
+}
+
+.search__input {
+  width: 20rem;
+  padding: 12px 24px;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  color: #3b4caa;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1.1rem 1.1rem;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 0.1rem solid #3b4caa;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.search__input::-webkit-input-placeholder {
+  color: color(#3b4caa a(0.8));
+  letter-spacing: 1.5px;
+}
+
+.search__input:-ms-input-placeholder {
+  color: color(#3b4caa a(0.8));
+  letter-spacing: 1.5px;
+}
+
+.search__input::-ms-input-placeholder {
+  color: color(#3b4caa a(0.8));
+  letter-spacing: 1.5px;
+}
+
+.search__input::placeholder {
+  color: color(#3b4caa a(0.8));
+  letter-spacing: 1.5px;
+}
+
+.search__input:hover, .search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #3b4caa;
+  border-radius: 0;
+  background-position: 100% center;
 }
 
 button {

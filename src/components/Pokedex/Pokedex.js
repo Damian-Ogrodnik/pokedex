@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { fetchPokemon } from "../../redux/data/dataUtils";
 
+import { Header } from "../Header";
 import { Pagination } from "../Pagination";
 import { PokemonBoard } from "../PokemonBoard/PokemonBoard";
-import { Search } from "../Search";
 
 export const Pokedex = () => {
   const pokemonArray = useSelector((store) => store.data.pokemon);
@@ -18,7 +18,7 @@ export const Pokedex = () => {
 
   return (
     <div className="pokedex">
-      <Search />
+      <Header />
       <PokemonBoard />
       <Pagination pokemonArray={pokemonArray} />
     </div>

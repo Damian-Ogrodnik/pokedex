@@ -2,7 +2,7 @@ import React from "react";
 import { IconContext } from "react-icons";
 import { MdError } from "react-icons/md";
 
-import pokeball from "../../assets/pokeball.png";
+import pokeballImg from "../../assets/pokeball.png";
 
 export const Loader = ({ loading, error, render }) => {
   return (
@@ -16,7 +16,7 @@ export const Loader = ({ loading, error, render }) => {
         </div>
       ) : loading ? (
         <div className="loader">
-          <img src={pokeball} alt="pokeball" />
+          <img src={pokeballImg} alt="pokeball" />
         </div>
       ) : (
         render()
