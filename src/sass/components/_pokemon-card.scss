@@ -7,7 +7,7 @@
   align-items: center;
   place-self: center;
   width: 11rem;
-  height: 13rem;
+  height: 15rem;
   background-color: $second-color;
   overflow: hidden;
   box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3),
@@ -37,6 +37,8 @@
     -moz-box-shadow: inset 0px -32px 16px 0px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0px -32px 16px 0px rgba(0, 0, 0, 0.16);
     p {
+      color: white;
+      text-shadow: 1px 1px 2px black;
       font-weight: 700;
       margin: 0.5rem 0rem;
     }

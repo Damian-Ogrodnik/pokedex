@@ -24,8 +24,8 @@ export const PokemonBoard = () => {
 
   return (
     <div className="pokemon-board">
-      {paginatedPokemonArray.map(({ ...props }) => (
-        <PokemonCard {...props} />
+      {paginatedPokemonArray.map(({ name, ...props }) => (
+        <PokemonCard key={name} name={name} {...props} />
       ))}
     </div>
   );

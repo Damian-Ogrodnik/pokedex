@@ -8,6 +8,7 @@ button {
   border: none;
   background-color: $background-color;
   border: 0.15rem solid $second-background-color;
+  text-shadow: 1px 1px 2px black;
 
   &:active {
     transform: translateY(2px);

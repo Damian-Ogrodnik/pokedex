@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useFetch } from "../../custom-hooks";
 
 import { Loader } from "../Loader";
+import { TypeInfo } from "../TypeInfo/TypeInfo";
 
 export const PokemonCard = ({ name, url }) => {
   const [imgPath, setImgPath] = useState("");
@@ -14,7 +15,9 @@ export const PokemonCard = ({ name, url }) => {
   }, [url]);
 
   useEffect(() => {
-    if (Boolean(response)) setImgPath(response.sprites.front_default);
+    if (Boolean(response)) {
+      setImgPath(response.sprites.front_default);
+    }
   }, [response, name]);
 
   return (
@@ -24,6 +27,7 @@ export const PokemonCard = ({ name, url }) => {
       render={() => {
         return (
           <div className="pokemon-card">
+            <TypeInfo types={response ? response.types : []} />
             <img src={imgPath} alt={`pokemon ${name}`} />
             <div className="pokemon-card__details">
               <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
