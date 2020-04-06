@@ -13,3 +13,19 @@ export const fetchPokemon = () => async (dispatch) => {
     dispatch(actions.fetchFailure(error.message));
   }
 };
+
+export const filterPokemon = (search, pokemon) => async (dispatch) => {
+  try {
+    const filteredPokemon = await filterArray(search, pokemon);
+    dispatch(actions.setFilteredPokemon(filteredPokemon));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const filterArray = async (search, array) => {
+  const filteredArray = await array.filter(({ name }) =>
+    name.toLowerCase().includes(search.toLowerCase())
+  );
+  return filteredArray;
+};

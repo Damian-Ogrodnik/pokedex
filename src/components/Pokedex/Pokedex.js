@@ -10,6 +10,9 @@ import { PokemonBoard } from "../PokemonBoard/PokemonBoard";
 
 export const Pokedex = () => {
   const pokemonArray = useSelector((store) => store.data.pokemon);
+  const pokemonFilteredArray = useSelector(
+    (store) => store.data.filteredPokemon
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,7 +23,11 @@ export const Pokedex = () => {
     <div className="pokedex">
       <Header />
       <PokemonBoard />
-      <Pagination pokemonArray={pokemonArray} />
+      <Pagination
+        pokemonArray={
+          pokemonFilteredArray ? pokemonFilteredArray : pokemonArray
+        }
+      />
     </div>
   );
 };

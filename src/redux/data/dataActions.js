@@ -19,3 +19,10 @@ export const fetchFailure = (error) => {
     payload: { error },
   };
 };
+
+export const setFilteredPokemon = (filteredPokemon) => {
+  return {
+    type: types.FILTER_POKEMON,
+    payload: { filteredPokemon },
+  };
+};

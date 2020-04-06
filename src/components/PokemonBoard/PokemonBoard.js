@@ -6,15 +6,21 @@ import { PokemonCard } from "../PokemonCard";
 
 export const PokemonBoard = () => {
   const pokemonArray = useSelector((store) => store.data.pokemon);
+  const filteredPokemonArray = useSelector(
+    (store) => store.data.filteredPokemon
+  );
   const paginatedPokemonArray = useSelector(
     (store) => store.pagination.paginatedPokemon
   );
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (pokemonArray.length) dispatch(paginatePokemon(1, pokemonArray));
+    filteredPokemonArray
+      ? dispatch(paginatePokemon(1, filteredPokemonArray))
+      : dispatch(paginatePokemon(1, pokemonArray));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pokemonArray]);
+  }, [pokemonArray, filteredPokemonArray]);
 
   return (
     <div className="pokemon-board">

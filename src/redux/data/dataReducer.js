@@ -2,6 +2,7 @@ import * as types from "./dataTypes";
 
 const initialState = {
   pokemon: [],
+  filteredPokemon: null,
   loading: false,
   error: null,
 };
@@ -26,6 +27,11 @@ const dataReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: payload.error,
+      };
+    case types.FILTER_POKEMON:
+      return {
+        ...state,
+        filteredPokemon: payload.filteredPokemon,
       };
     default:
       return state;
