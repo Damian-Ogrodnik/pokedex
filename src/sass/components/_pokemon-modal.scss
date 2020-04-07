@@ -1,7 +1,7 @@
 .pokemon-modal {
   position: absolute;
   width: 40%;
-  height: 95%;
+  height: auto;
   top: 50%;
   left: 50%;
   right: auto;
@@ -10,7 +10,7 @@
   transform: translate(-50%, -50%);
   background-color: $third-background-color;
   border: 0.75rem solid #2b2d42;
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 1rem;
   outline: none;
 
@@ -24,34 +24,33 @@
       font-size: 3rem;
       color: white;
       text-shadow: 1px 1px 2px black;
-      margin-bottom: 2rem;
-
-      &::after {
-        position: absolute;
-        content: "";
-        left: 0;
-        right: 0;
-        bottom: -0.5rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin: auto;
-        width: 70%;
-        border: 1px solid #2b2d42;
-      }
+      margin-bottom: 1rem;
     }
   }
 
   &__main-info {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 2rem;
+
+    &::after {
+      @include line-separator;
+    }
 
     &__stats {
       width: 100%;
 
       &.grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 1rem;
         height: 33%;
+
+        img {
+          height: 1.5rem;
+          justify-self: end;
+        }
       }
 
       p {
@@ -62,6 +61,31 @@
       img {
         height: 10rem;
       }
+    }
+  }
+
+  &__strengths-weaknesses {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h3 {
+      width: 100%;
+      margin-top: 2rem;
+      font-size: 1.75rem;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+      text-align: center;
+    }
+    &::after {
+      @include line-separator;
+    }
+  }
+
+  &__close {
+    @include flex-center;
+    button {
+      width: 10rem;
     }
   }
 }

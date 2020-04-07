@@ -10,3 +10,16 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@mixin line-separator {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #2b2d42;
+}
