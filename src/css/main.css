@@ -261,6 +261,89 @@
   width: 8rem;
 }
 
+.pokemon-modal {
+  position: absolute;
+  width: 40%;
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #f5eeeefa;
+  border: 0.75rem solid #2b2d42;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: none;
+}
+
+.pokemon-modal__details {
+  height: 100%;
+  width: 100%;
+}
+
+.pokemon-modal__details h2 {
+  position: relative;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  margin-bottom: 2rem;
+}
+
+.pokemon-modal__details h2::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 70%;
+  border: 1px solid #2b2d42;
+}
+
+.pokemon-modal__main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.pokemon-modal__main-info__stats {
+  width: 100%;
+}
+
+.pokemon-modal__main-info__stats.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 33%;
+}
+
+.pokemon-modal__main-info__stats p {
+  font-size: 1.5rem;
+}
+
+.pokemon-modal__main-info__img img {
+  height: 10rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 /* Base styling */
 .search {
   margin-right: 5rem;
@@ -333,6 +416,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.pokemon-types.modal {
+  background: transparent;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .pokemon-type {
@@ -437,15 +527,13 @@ button {
   border-radius: 1rem;
   color: white;
   border: none;
-  background-color: #536aeb;
-  border: 0.15rem solid #3b4caa;
+  background-color: #3b4caa;
   text-shadow: 1px 1px 2px black;
 }
 
 button:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
-  background-color: #ffde00;
 }
 
 ul {

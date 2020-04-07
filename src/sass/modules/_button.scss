@@ -6,12 +6,10 @@ button {
   border-radius: 1rem;
   color: white;
   border: none;
-  background-color: $background-color;
-  border: 0.15rem solid $second-background-color;
+  background-color: $second-background-color;
   text-shadow: 1px 1px 2px black;
 
   &:active {
     transform: translateY(2px);
-    background-color: $second-color;
   }
 }

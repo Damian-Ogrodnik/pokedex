@@ -5,6 +5,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  &.modal {
+    background: transparent;
+    justify-content: flex-start;
+  }
 }
 
 .pokemon-type {
