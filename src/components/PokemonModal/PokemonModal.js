@@ -56,32 +56,32 @@ export const PokemonModal = ({
         <h2>{name.charAt(0).toUpperCase() + name.substring(1)}</h2>
         <div className="pokemon-modal__main-info">
           <div className="pokemon-modal__main-info__stats wrapper">
-            <div className="pokemon-modal__main-info__stats grid">
-              <img src={pokeballBlackIcon} alt="type" />
+            <div className="pokemon-modal__main-info__stats grid__right">
               <TypeInfo types={types} name="type" />
+              <img src={pokeballBlackIcon} alt="type" />
             </div>
-            <div className="pokemon-modal__main-info__stats grid">
-              <img src={heightIcon} alt="height" />
+            <div className="pokemon-modal__main-info__stats grid__right ">
               <p>{height}</p>
+              <img src={heightIcon} alt="height" />
             </div>
-            <div className="pokemon-modal__main-info__stats grid">
-              <img src={weightIcon} alt="weight" />
+            <div className="pokemon-modal__main-info__stats grid__right">
               <p>{weight}</p>
+              <img src={weightIcon} alt="weight" />
             </div>
           </div>
           <div className="pokemon-modal__main-info__img">
             <img src={imgPath} alt={`pokemon ${name}`} />
           </div>
           <div className="pokemon-modal__main-info__stats wrapper">
-            <div className="pokemon-modal__main-info__stats grid">
+            <div className="pokemon-modal__main-info__stats  grid__left">
               <img src={atackIcon} alt="attack" />
               <p>{stats.length ? stats[4].base_stat : ""}</p>
             </div>
-            <div className="pokemon-modal__main-info__stats grid">
+            <div className="pokemon-modal__main-info__stats grid__left">
               <img src={defenseIcon} alt="defense" />
               <p>{stats.length ? stats[3].base_stat : ""}</p>
             </div>
-            <div className="pokemon-modal__main-info__stats grid">
+            <div className="pokemon-modal__main-info__stats grid__left">
               <img src={healthIcon} alt="health" />
               <p>{stats.length ? stats[5].base_stat : ""}</p>
             </div>
