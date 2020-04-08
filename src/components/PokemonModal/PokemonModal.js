@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 
-import { getDamageInfo } from "../../services";
-
-import { TypeInfo } from "../TypeInfo";
 import { PokemonInfo } from "../PokemonInfo";
+import { PokemonAttributes } from "../PokemonAttributes";
 
 export const PokemonModal = ({
   name,
@@ -16,18 +14,10 @@ export const PokemonModal = ({
   ...props
 }) => {
   const [pokemonStats, setPokemonStats] = useState({ types, ...props });
-  const [attributes, setAttributes] = useState({});
 
   useEffect(() => {
     Modal.setAppElement("#root");
   }, []);
-
-  useEffect(() => {
-    const getPokemonDetails = async () => {
-      if (types.length && openModal) setAttributes(await getDamageInfo(types));
-    };
-    getPokemonDetails();
-  }, [openModal, types]);
 
   useEffect(() => {
     if (stats.length) {
@@ -51,16 +41,7 @@ export const PokemonModal = ({
       <div className="pokemon-modal__details">
         <h2>{name.charAt(0).toUpperCase() + name.substring(1)}</h2>
         <PokemonInfo data={{ name, pokemonStats, imgPath }} />
-        <div className="pokemon-modal__strengths-weaknesses">
-          <div className="pokemon-modal__strengths-weaknesses--category">
-            <h3>STRENGTHS</h3>
-            <TypeInfo types={attributes.strengths} name="details" />
-          </div>
-          <div className="pokemon-modal__strengths-weaknesses--category">
-            <h3>WEAKNESSES</h3>
-            <TypeInfo types={attributes.weaknesses} name="details" />
-          </div>
-        </div>
+        <PokemonAttributes types={types} openModal={openModal} />
         <div className="pokemon-modal__close">
           <button onClick={() => setOpenModal(false)}>X</button>
         </div>
