@@ -8,19 +8,18 @@ import { TypeInfo } from "../TypeInfo";
 
 export const PokemonCard = ({ name, url }) => {
   const [openModal, setOpenModal] = useState(false);
-  const [imgPath, setImgPath] = useState("");
   const [loading, setLoading] = useState(false);
-  const { response, error } = useFetch(url, setLoading);
+  const { response, error } = useFetch(url, setLoading, {
+    types: [],
+    height: {},
+    weight: {},
+    stats: [],
+    sprites: {},
+  });
 
   useEffect(() => {
     setLoading(true);
   }, [url]);
-
-  useEffect(() => {
-    if (Boolean(response)) {
-      setImgPath(response.sprites.front_default);
-    }
-  }, [response, name]);
 
   return (
     <Loader
@@ -30,20 +29,20 @@ export const PokemonCard = ({ name, url }) => {
         return (
           <div className="pokemon-card">
             <TypeInfo types={response ? response.types : []} />
-            <img src={imgPath} alt={`pokemon ${name}`} />
+            <img src={response.sprites.front_default} alt={`pokemon ${name}`} />
             <div className="pokemon-card__details">
               <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
               <button onClick={() => setOpenModal(true)}>Details</button>
             </div>
             <PokemonModal
               name={name}
-              imgPath={imgPath}
-              types={response ? response.types : []}
+              imgPath={response.sprites.front_default}
+              types={response.types}
               openModal={openModal}
               setOpenModal={setOpenModal}
-              height={response ? response.height : {}}
-              weight={response ? response.weight : {}}
-              stats={response ? response.stats : []}
+              height={response.height}
+              weight={response.weight}
+              stats={response.stats}
             />
           </div>
         );
