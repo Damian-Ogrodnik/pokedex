@@ -107,6 +107,8 @@
     grid-template-columns: 2rem 1fr;
     grid-template-rows: 1fr;
     p {
+      grid-column: 2 / 3;
+      grid-row: 1;
       align-self: center;
     }
   }
