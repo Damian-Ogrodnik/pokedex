@@ -111,7 +111,18 @@ export const Pagination = ({ pokemonArray }) => {
     <div className="pagination__wrapper">
       <ul className="pagination">
         {renderIcon(true)}
-        {renderPagination()}
+        {pageNumbers.length > 10
+          ? renderPagination()
+          : pageNumbers.map((number) => (
+              <li
+                key={number}
+                className={
+                  "pagination__item" + (active === number ? " active" : "")
+                }
+              >
+                <button onClick={() => paginate(number)}>{number}</button>
+              </li>
+            ))}
         {renderIcon(false)}
       </ul>
     </div>
