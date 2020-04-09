@@ -118,6 +118,8 @@
   .pokemon-types {
     &.type {
       :first-child {
+        position: absolute;
+        height: 1.5rem;
         width: 4.5rem;
         height: auto;
       }
