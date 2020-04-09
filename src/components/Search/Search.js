@@ -20,7 +20,7 @@ export const Search = () => {
       dispatch(fetchPokemon(`https://pokeapi.co/api/v2/type/${type}`, true));
       dispatch(filterPokemon(value, pokemon));
     } else {
-      dispatch(filterPokemon(value, pokemon));
+      dispatch(fetchPokemon());
     }
     e.preventDefault();
   };

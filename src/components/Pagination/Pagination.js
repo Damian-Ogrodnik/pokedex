@@ -66,7 +66,7 @@ export const Pagination = ({ pokemonArray }) => {
     let start,
       stop = 0;
 
-    if (active < 6) {
+    if (active < 10) {
       start = 0;
       stop = 10;
     } else if (active > pageNumbers.length - 9) {
@@ -87,43 +87,27 @@ export const Pagination = ({ pokemonArray }) => {
     ));
   };
 
-  const renderIcon = (left) => {
-    if (pageNumbers.length > 10) {
-      if (left) {
-        return (
-          <IconContext.Provider value={{ className: "pagination__arrow left" }}>
-            <FaArrowLeft onClick={() => pageDown()} />
-          </IconContext.Provider>
-        );
-      } else {
-        return (
-          <IconContext.Provider
-            value={{ className: "pagination__arrow right" }}
-          >
-            <FaArrowRight onClick={() => pageUp()} />
-          </IconContext.Provider>
-        );
-      }
-    }
+  const renderIcon = (direction, func) => {
+    if (pageNumbers.length > 10)
+      return (
+        <IconContext.Provider
+          value={{ className: `pagination__arrow ${direction}` }}
+        >
+          {direction === "left" ? (
+            <FaArrowLeft onClick={() => func()} />
+          ) : (
+            <FaArrowRight onClick={() => func()} />
+          )}
+        </IconContext.Provider>
+      );
   };
 
   return (
     <div className="pagination__wrapper">
       <ul className="pagination">
-        {renderIcon(true)}
-        {pageNumbers.length > 10
-          ? renderPagination()
-          : pageNumbers.map((number) => (
-              <li
-                key={number}
-                className={
-                  "pagination__item" + (active === number ? " active" : "")
-                }
-              >
-                <button onClick={() => paginate(number)}>{number}</button>
-              </li>
-            ))}
-        {renderIcon(false)}
+        {renderIcon("left", pageDown)}
+        {renderPagination()}
+        {renderIcon("right", pageUp)}
       </ul>
     </div>
   );
