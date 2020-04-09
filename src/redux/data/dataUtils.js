@@ -2,13 +2,20 @@ import * as actions from "./dataActions";
 
 import axios from "axios";
 
-export const fetchPokemon = () => async (dispatch) => {
+export const fetchPokemon = (
+  url = "https://pokeapi.co/api/v2/pokemon/?limit=811s",
+  category = false
+) => async (dispatch) => {
   try {
     await dispatch(actions.startFetch());
-    const response = await axios.get(
-      "https://pokeapi.co/api/v2/pokemon/?limit=811s"
-    );
-    dispatch(actions.fetchSuccess(response.data.results));
+    const response = await axios.get(url);
+    if (category) {
+      const pokemon = await response.data.pokemon.map(({ pokemon }) => pokemon);
+      console.log(pokemon);
+      dispatch(actions.fetchSuccess(pokemon));
+    } else {
+      dispatch(actions.fetchSuccess(response.data.results));
+    }
   } catch (error) {
     dispatch(actions.fetchFailure(error.message));
   }

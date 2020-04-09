@@ -5,7 +5,9 @@ export const TypeInfo = ({ types, name = "" }) => {
     <div className={`pokemon-types ${name}`}>
       {types &&
         types.map(({ type }) => (
-          <div className={`pokemon-type ${type.name} ${name}`}>{type.name}</div>
+          <div key={type.name} className={`pokemon-type ${type.name} ${name}`}>
+            {type.name}
+          </div>
         ))}
     </div>
   );

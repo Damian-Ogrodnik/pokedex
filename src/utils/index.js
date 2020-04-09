@@ -13,3 +13,24 @@ export const statsData = [
   [defenseIcon, "defense"],
   [healthIcon, "health"],
 ];
+
+export const pokemonTypes = [
+  "poison",
+  "grass",
+  "ghost",
+  "rock",
+  "fighting",
+  "fairy",
+  "steel",
+  "ice",
+  "ground",
+  "psychic",
+  "electric",
+  "dark",
+  "normal",
+  "bug",
+  "water",
+  "dragon",
+  "flying",
+  "fire",
+];
