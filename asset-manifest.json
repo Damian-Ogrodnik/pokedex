@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/pokedex/static/css/main.45022dea.chunk.css",
+    "main.js": "/pokedex/static/js/main.3558f3ee.chunk.js",
+    "main.js.map": "/pokedex/static/js/main.3558f3ee.chunk.js.map",
+    "runtime-main.js": "/pokedex/static/js/runtime-main.3f186e6a.js",
+    "runtime-main.js.map": "/pokedex/static/js/runtime-main.3f186e6a.js.map",
+    "static/js/2.216e34d6.chunk.js": "/pokedex/static/js/2.216e34d6.chunk.js",
+    "static/js/2.216e34d6.chunk.js.map": "/pokedex/static/js/2.216e34d6.chunk.js.map",
+    "index.html": "/pokedex/index.html",
+    "precache-manifest.530d87b6b2ca219ea429d085105207bc.js": "/pokedex/precache-manifest.530d87b6b2ca219ea429d085105207bc.js",
+    "service-worker.js": "/pokedex/service-worker.js",
+    "static/css/main.45022dea.chunk.css.map": "/pokedex/static/css/main.45022dea.chunk.css.map",
+    "static/js/2.216e34d6.chunk.js.LICENSE.txt": "/pokedex/static/js/2.216e34d6.chunk.js.LICENSE.txt",
+    "static/media/attack.png": "/pokedex/static/media/attack.45fe1d49.png",
+    "static/media/defense.png": "/pokedex/static/media/defense.4f3cd58b.png",
+    "static/media/health.png": "/pokedex/static/media/health.5289cc89.png",
+    "static/media/pokeball-black.png": "/pokedex/static/media/pokeball-black.f5fbd090.png",
+    "static/media/pokeball.png": "/pokedex/static/media/pokeball.ba197c3b.png",
+    "static/media/pokedex_logo.png": "/pokedex/static/media/pokedex_logo.6f1fd446.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f186e6a.js",
+    "static/js/2.216e34d6.chunk.js",
+    "static/css/main.45022dea.chunk.css",
+    "static/js/main.3558f3ee.chunk.js"
+  ]
+}
