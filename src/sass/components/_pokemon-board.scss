@@ -13,6 +13,7 @@
 
 @media only screen and (max-width: 500px) {
   .pokemon-board {
+    height: 80vh;
     grid-template-columns: 1fr 1fr;
     gap: 0.25rem;
   }

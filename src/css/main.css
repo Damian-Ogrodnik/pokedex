@@ -131,7 +131,8 @@
   }
   .header__logo {
     position: fixed;
-    bottom: 0.25rem;
+    top: 2rem;
+    right: 2rem;
     margin: -1rem 0 0 0rem;
     height: 1.5rem;
   }
@@ -200,6 +201,10 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .pagination {
+    position: fixed;
+    bottom: 2rem;
+  }
   .pagination__item {
     margin: 0 0.15rem;
   }
@@ -238,6 +243,7 @@
 
 @media only screen and (max-width: 500px) {
   .pokemon-board {
+    height: 80vh;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     gap: 0.25rem;
@@ -609,8 +615,7 @@
 
 @media only screen and (max-width: 500px) {
   .search {
-    margin-right: 0rem;
-    margin: 0.5rem 0rem;
+    margin: 2rem 0rem 0.5rem 0rem;
   }
   .search__input {
     width: 15rem;
@@ -844,5 +849,11 @@ ul {
   background-color: #536aeb;
   height: 100vh;
   background: linear-gradient(120deg, #3b4caa 0% 5%, #536aeb 5% 10%, #f5eeeefa 10% 90%, #536aeb 90% 95%, #3b4caa 95% 100%);
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

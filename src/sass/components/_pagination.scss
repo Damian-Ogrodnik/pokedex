@@ -21,6 +21,8 @@
 
 @media only screen and (max-width: 500px) {
   .pagination {
+    position: fixed;
+    bottom: 2rem;
     &__item {
       margin: 0 0.15rem;
     }

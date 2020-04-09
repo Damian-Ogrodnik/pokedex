@@ -28,4 +28,7 @@
     $background-color 90% 95%,
     $second-background-color 95% 100%
   );
+  @media only screen and (max-width: 600px) {
+    height: 100%;
+  }
 }
