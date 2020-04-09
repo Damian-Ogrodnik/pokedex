@@ -5,19 +5,31 @@ import { IconContext } from "react-icons";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import { paginatePokemon } from "../../redux/pagination/paginationUtils";
+import { useWindowSize } from "../../custom-hooks";
 
-export const Pagination = ({ pokemonPerPage = 10, pokemonArray }) => {
+export const Pagination = ({ pokemonArray }) => {
   const [active, setActive] = useState(1);
   const [pageNumbers, setPageNumbers] = useState([]);
-
+  const [pokemonOnPage, setPokemonOnPage] = useState(10);
+  const windowWidth = useWindowSize();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (windowWidth < 768) {
+      setPokemonOnPage(8);
+    }
+  });
+
+  useEffect(() => {
+    paginate(1);
+  }, [pokemonArray, windowWidth]);
 
   useEffect(() => {
     const calculatePages = async () => {
       let newArray = [];
       for (
         let i = 1;
-        i <= Math.ceil(pokemonArray.length / pokemonPerPage);
+        i <= Math.ceil(pokemonArray.length / pokemonOnPage);
         i++
       ) {
         newArray.push(i);
@@ -26,23 +38,23 @@ export const Pagination = ({ pokemonPerPage = 10, pokemonArray }) => {
     };
     calculatePages();
     setActive(1);
-  }, [pokemonArray]);
+  }, [pokemonArray, pokemonOnPage]);
 
   const paginate = (pageNumber) => {
-    dispatch(paginatePokemon(pageNumber, pokemonArray));
+    dispatch(paginatePokemon(pageNumber, pokemonArray, pokemonOnPage));
     setActive(pageNumber);
   };
 
   const pageUp = () => {
     let upNumber =
       active === pageNumbers.length ? pageNumbers.length : active + 1;
-    dispatch(paginatePokemon(upNumber, pokemonArray));
+    dispatch(paginatePokemon(upNumber, pokemonArray, pokemonOnPage));
     setActive(upNumber);
   };
 
   const pageDown = () => {
     let downNumber = active - 1 === 0 ? 1 : active - 1;
-    dispatch(paginatePokemon(downNumber, pokemonArray));
+    dispatch(paginatePokemon(downNumber, pokemonArray, pokemonOnPage));
     setActive(downNumber);
   };
 

@@ -1,6 +1,6 @@
 import * as actions from "./paginationActions";
 
-export const paginatePokemon = (page, pokemon, pokemonPerPage = 10) => async (
+export const paginatePokemon = (page, pokemon, pokemonPerPage) => async (
   dispatch
 ) => {
   try {

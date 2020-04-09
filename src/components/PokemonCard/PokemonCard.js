@@ -19,7 +19,7 @@ export const PokemonCard = ({ name, url }) => {
 
   useEffect(() => {
     setLoading(true);
-  }, [url]);
+  }, []);
 
   return (
     <Loader
