@@ -9,10 +9,8 @@ import { Pagination } from "../Pagination";
 import { PokemonBoard } from "../PokemonBoard/PokemonBoard";
 
 export const Pokedex = () => {
-  const pokemonArray = useSelector((store) => store.data.pokemon);
-  const pokemonFilteredArray = useSelector(
-    (store) => store.data.filteredPokemon
-  );
+  const pokemonArray = useSelector(({ data }) => data.pokemon);
+  const pokemonFilteredArray = useSelector(({ data }) => data.filteredPokemon);
   const dispatch = useDispatch();
 
   useEffect(() => {

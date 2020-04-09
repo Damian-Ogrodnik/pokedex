@@ -5,7 +5,7 @@ import { filterPokemon } from "../../redux/data/dataUtils";
 
 export const Search = () => {
   const [value, setValue] = useState("");
-  const pokemon = useSelector((store) => store.data.pokemon);
+  const pokemon = useSelector(({ data }) => data.pokemon);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
