@@ -41,3 +41,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .search {
+    margin-right: 0rem;
+    margin: 0.5rem 0rem;
+    &__input {
+      width: 15rem;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.1rem;
+    }
+  }
+}

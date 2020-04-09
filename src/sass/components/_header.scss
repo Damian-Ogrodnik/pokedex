@@ -7,3 +7,15 @@
     height: 5rem;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .header {
+    @include flex-center-column;
+    &__logo {
+      position: fixed;
+      bottom: 0.25rem;
+      margin: -1rem 0 0 0rem;
+      height: 1.5rem;
+    }
+  }
+}

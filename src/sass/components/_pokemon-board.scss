@@ -4,3 +4,16 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+
+@media only screen and (max-width: 768px) {
+  .pokemon-board {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .pokemon-board {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+  }
+}

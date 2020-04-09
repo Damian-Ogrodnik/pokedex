@@ -11,14 +11,18 @@ export const Pagination = ({ pokemonArray }) => {
   const [active, setActive] = useState(1);
   const [pageNumbers, setPageNumbers] = useState([]);
   const [pokemonOnPage, setPokemonOnPage] = useState(10);
-  const windowWidth = useWindowSize();
+  const { windowWidth } = useWindowSize();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (windowWidth < 768) {
+    if (windowWidth < 768 && windowWidth > 500) {
       setPokemonOnPage(8);
+    } else if (windowWidth < 500) {
+      setPokemonOnPage(4);
+    } else {
+      setPokemonOnPage(10);
     }
-  });
+  }, [windowWidth]);
 
   useEffect(() => {
     paginate(1);

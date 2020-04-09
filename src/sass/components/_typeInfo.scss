@@ -113,3 +113,28 @@
     background-color: #66b;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .pokemon-types {
+    &.type {
+      :first-child {
+        width: 4.5rem;
+        height: auto;
+      }
+      :nth-child(2) {
+        position: absolute;
+        width: 4.5rem;
+        height: 1.5rem;
+        top: 0.5rem;
+      }
+    }
+  }
+  .pokemon-type {
+    &.details {
+      width: 60%;
+      margin: 0.5rem 0rem;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  }
+}
