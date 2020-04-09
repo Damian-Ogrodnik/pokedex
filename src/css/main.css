@@ -480,6 +480,222 @@
   width: 10rem;
 }
 
+.pokemon-modal.poison {
+  border-color: #aa5599;
+}
+
+.pokemon-modal.poison button {
+  background-color: #aa5599;
+}
+
+.pokemon-modal.poison ::after {
+  border-color: #aa5599;
+}
+
+.pokemon-modal.grass {
+  border-color: #77cc55;
+}
+
+.pokemon-modal.grass button {
+  background-color: #77cc55;
+}
+
+.pokemon-modal.grass ::after {
+  border-color: #77cc55;
+}
+
+.pokemon-modal.ghost {
+  border-color: #66b;
+}
+
+.pokemon-modal.ghost button {
+  background-color: #66b;
+}
+
+.pokemon-modal.ghost ::after {
+  border-color: #66b;
+}
+
+.pokemon-modal.rock {
+  border-color: #ba6;
+}
+
+.pokemon-modal.rock button {
+  background-color: #ba6;
+}
+
+.pokemon-modal.rock ::after {
+  border-color: #ba6;
+}
+
+.pokemon-modal.fighting {
+  border-color: #b54;
+}
+
+.pokemon-modal.fighting button {
+  background-color: #b54;
+}
+
+.pokemon-modal.fighting ::after {
+  border-color: #b54;
+}
+
+.pokemon-modal.fairy {
+  border-color: #e9e;
+}
+
+.pokemon-modal.fairy button {
+  background-color: #e9e;
+}
+
+.pokemon-modal.fairy ::after {
+  border-color: #e9e;
+}
+
+.pokemon-modal.steel {
+  border-color: #aaaabb;
+}
+
+.pokemon-modal.steel button {
+  background-color: #aaaabb;
+}
+
+.pokemon-modal.steel ::after {
+  border-color: #aaaabb;
+}
+
+.pokemon-modal.ice {
+  border-color: #66ccff;
+}
+
+.pokemon-modal.ice button {
+  background-color: #66ccff;
+}
+
+.pokemon-modal.ice ::after {
+  border-color: #66ccff;
+}
+
+.pokemon-modal.ground {
+  border-color: #ddbb55;
+}
+
+.pokemon-modal.ground button {
+  background-color: #ddbb55;
+}
+
+.pokemon-modal.ground ::after {
+  border-color: #ddbb55;
+}
+
+.pokemon-modal.psychic {
+  border-color: #ff5599;
+}
+
+.pokemon-modal.psychic button {
+  background-color: #ff5599;
+}
+
+.pokemon-modal.psychic ::after {
+  border-color: #ff5599;
+}
+
+.pokemon-modal.electric {
+  border-color: #e4b72d;
+}
+
+.pokemon-modal.electric button {
+  background-color: #e4b72d;
+}
+
+.pokemon-modal.electric ::after {
+  border-color: #e4b72d;
+}
+
+.pokemon-modal.dark {
+  border-color: #775544;
+}
+
+.pokemon-modal.dark button {
+  background-color: #775544;
+}
+
+.pokemon-modal.dark ::after {
+  border-color: #775544;
+}
+
+.pokemon-modal.normal {
+  border-color: #aaaa99;
+}
+
+.pokemon-modal.normal button {
+  background-color: #aaaa99;
+}
+
+.pokemon-modal.normal ::after {
+  border-color: #aaaa99;
+}
+
+.pokemon-modal.bug {
+  border-color: #aabb22;
+}
+
+.pokemon-modal.bug button {
+  background-color: #aabb22;
+}
+
+.pokemon-modal.bug ::after {
+  border-color: #aabb22;
+}
+
+.pokemon-modal.water {
+  border-color: #429efa;
+}
+
+.pokemon-modal.water button {
+  background-color: #429efa;
+}
+
+.pokemon-modal.water ::after {
+  border-color: #429efa;
+}
+
+.pokemon-modal.dragon {
+  border-color: #7766ee;
+}
+
+.pokemon-modal.dragon button {
+  background-color: #7766ee;
+}
+
+.pokemon-modal.dragon ::after {
+  border-color: #7766ee;
+}
+
+.pokemon-modal.flying {
+  border-color: #8899ff;
+}
+
+.pokemon-modal.flying button {
+  background-color: #8899ff;
+}
+
+.pokemon-modal.flying ::after {
+  border-color: #8899ff;
+}
+
+.pokemon-modal.fire {
+  border-color: #ff4422;
+}
+
+.pokemon-modal.fire button {
+  background-color: #ff4422;
+}
+
+.pokemon-modal.fire ::after {
+  border-color: #ff4422;
+}
+
 .grid__right {
   display: -ms-grid;
   display: grid;
@@ -692,81 +908,81 @@
 
 .pokemon-type.details {
   width: 60%;
-  margin: 0.5rem 0rem;
+  margin: 0.25rem 0rem;
   font-size: 1.25rem;
-  padding: 0.75rem;
-}
-
-.pokemon-type.grass {
-  background-color: #77cc55;
+  padding: 0.5rem;
 }
 
 .pokemon-type.poison {
   background-color: #aa5599;
 }
 
-.pokemon-type.fire {
-  background-color: #ff4422;
+.pokemon-type.grass {
+  background-color: #77cc55;
 }
 
-.pokemon-type.flying {
-  background-color: #8899ff;
-}
-
-.pokemon-type.dragon {
-  background-color: #7766ee;
-}
-
-.pokemon-type.water {
-  background-color: #429efa;
-}
-
-.pokemon-type.bug {
-  background-color: #aabb22;
-}
-
-.pokemon-type.normal {
-  background-color: #aaaa99;
-}
-
-.pokemon-type.dark {
-  background-color: #775544;
-}
-
-.pokemon-type.electric {
-  background-color: #e4b72d;
-}
-
-.pokemon-type.psychic {
-  background-color: #ff5599;
-}
-
-.pokemon-type.ground {
-  background-color: #ddbb55;
-}
-
-.pokemon-type.ice {
-  background-color: #66ccff;
-}
-
-.pokemon-type.steel {
-  background-color: #aaaabb;
-}
-
-.pokemon-type.fairy {
-  background-color: #e9e;
-}
-
-.pokemon-type.fighting {
-  background-color: #b54;
+.pokemon-type.ghost {
+  background-color: #66b;
 }
 
 .pokemon-type.rock {
   background-color: #ba6;
 }
 
-.pokemon-type.ghost {
-  background-color: #66b;
+.pokemon-type.fighting {
+  background-color: #b54;
+}
+
+.pokemon-type.fairy {
+  background-color: #e9e;
+}
+
+.pokemon-type.steel {
+  background-color: #aaaabb;
+}
+
+.pokemon-type.ice {
+  background-color: #66ccff;
+}
+
+.pokemon-type.ground {
+  background-color: #ddbb55;
+}
+
+.pokemon-type.psychic {
+  background-color: #ff5599;
+}
+
+.pokemon-type.electric {
+  background-color: #e4b72d;
+}
+
+.pokemon-type.dark {
+  background-color: #775544;
+}
+
+.pokemon-type.normal {
+  background-color: #aaaa99;
+}
+
+.pokemon-type.bug {
+  background-color: #aabb22;
+}
+
+.pokemon-type.water {
+  background-color: #429efa;
+}
+
+.pokemon-type.dragon {
+  background-color: #7766ee;
+}
+
+.pokemon-type.flying {
+  background-color: #8899ff;
+}
+
+.pokemon-type.fire {
+  background-color: #ff4422;
 }
 
 @media only screen and (max-width: 500px) {

@@ -14,10 +14,15 @@ export const PokemonModal = ({
   ...props
 }) => {
   const [pokemonStats, setPokemonStats] = useState({ types, ...props });
+  const [pokemonType, setPokemonType] = useState("");
 
   useEffect(() => {
     Modal.setAppElement("#root");
   }, []);
+
+  useEffect(() => {
+    if (types.length) setPokemonType(types[0].type.name);
+  }, [types]);
 
   useEffect(() => {
     if (stats.length) {
@@ -35,7 +40,7 @@ export const PokemonModal = ({
     <Modal
       isOpen={openModal}
       contentLabel="Pokemon Modal"
-      className="pokemon-modal"
+      className={`pokemon-modal ${pokemonType}`}
       overlayClassName="overlay"
     >
       <div className="pokemon-modal__details">

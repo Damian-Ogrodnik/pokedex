@@ -100,6 +100,18 @@
       width: 10rem;
     }
   }
+
+  @each $name, $color in $pokemon-types {
+    &.#{$name} {
+      border-color: $color;
+      button {
+        background-color: $color;
+      }
+      ::after {
+        border-color: $color;
+      }
+    }
+  }
 }
 
 .grid {
