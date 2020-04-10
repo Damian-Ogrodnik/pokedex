@@ -15,6 +15,7 @@ export const statsData = [
 ];
 
 export const pokemonTypes = [
+  "all",
   "poison",
   "grass",
   "ghost",

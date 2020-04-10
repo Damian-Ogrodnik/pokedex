@@ -6,7 +6,6 @@ import { pokemonTypes } from "../../utils";
 
 export const Search = () => {
   const [value, setValue] = useState("");
-  const [type, setType] = useState("all");
   const pokemon = useSelector(({ data }) => data.pokemon);
   const dispatch = useDispatch();
 
@@ -16,27 +15,27 @@ export const Search = () => {
   }, [pokemon]);
 
   const handleSubmit = async (e) => {
-    if (type !== "all") {
-      dispatch(fetchPokemon(`https://pokeapi.co/api/v2/type/${type}`, true));
-      dispatch(filterPokemon(value, pokemon));
-    } else {
-      dispatch(fetchPokemon());
-    }
+    dispatch(filterPokemon(value, pokemon));
     e.preventDefault();
+  };
+
+  const handleChange = (value) => {
+    value === "all"
+      ? dispatch(fetchPokemon())
+      : dispatch(fetchPokemon(`https://pokeapi.co/api/v2/type/${value}`, true));
   };
 
   return (
     <div className="search">
       <form onSubmit={(e) => handleSubmit(e)}>
         <select
-          onChange={(e) => setType(e.target.value)}
+          onChange={(e) => handleChange(e.target.value)}
           placeholder="Select pokemon"
           className="search__types"
         >
-          <option value="all">All</option>
-          {pokemonTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
+          {pokemonTypes.map((pokemonType) => (
+            <option key={pokemonType} value={pokemonType}>
+              {pokemonType}
             </option>
           ))}
         </select>
