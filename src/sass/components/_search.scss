@@ -48,6 +48,7 @@
     line-height: 1.5rem;
     padding: 0.5rem 1rem;
     text-align: center;
+    text-align-last: center;
     border: 0.1rem solid $second-background-color;
     cursor: pointer;
     border-radius: 50px;
@@ -55,6 +56,7 @@
     border: none;
     border: 0.1rem solid $second-background-color;
     color: $second-background-color;
+    outline: none;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -67,6 +69,10 @@
 
     ::-ms-expand {
       display: none;
+    }
+
+    select {
+      text-align: center;
     }
 
     &:hover,

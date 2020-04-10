@@ -836,6 +836,7 @@
   line-height: 1.5rem;
   padding: 0.5rem 1rem;
   text-align: center;
+  text-align-last: center;
   border: 0.1rem solid #393298;
   cursor: pointer;
   border-radius: 50px;
@@ -843,6 +844,7 @@
   border: none;
   border: 0.1rem solid #393298;
   color: #393298;
+  outline: none;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -857,6 +859,10 @@
 
 .search__types ::-ms-expand {
   display: none;
+}
+
+.search__types select {
+  text-align: center;
 }
 
 .search__types:hover,
