@@ -92,11 +92,11 @@
   width: 5rem;
   height: 5rem;
   margin-bottom: 1rem;
-  color: #3b4caa;
+  color: #393298;
 }
 
 .error p {
-  color: #3b4caa;
+  color: #393298;
 }
 
 .header {
@@ -182,9 +182,9 @@
 }
 
 .pagination__item.active button {
-  background-color: #3b4caa;
-  border: 0.25rem solid #ffde00;
-  color: #ffde00;
+  background-color: #393298;
+  border: 0.25rem solid #ffce31;
+  color: #ffce31;
   font-weight: 700;
 }
 
@@ -254,7 +254,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 0.2rem solid #3b4caa;
+  border: 0.2rem solid #393298;
   border-radius: 1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -269,7 +269,7 @@
   place-self: center;
   width: 11rem;
   height: 15rem;
-  background-color: #ffde00;
+  background-color: #ffce31;
   overflow: hidden;
   -webkit-box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3), 0 0.9rem 0.75rem rgba(0, 0, 0, 0.22);
           box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.3), 0 0.9rem 0.75rem rgba(0, 0, 0, 0.22);
@@ -289,7 +289,8 @@
   background-color: white;
   height: 8rem;
   width: 100%;
-  border-bottom: 0.2rem solid #3b4caa;
+  border-bottom: 0.2rem solid #393298;
+  padding: 0.5rem 0.5rem;
 }
 
 .pokemon-card__details {
@@ -333,7 +334,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #f5eeeefa;
-  border: 0.75rem solid #3b4caa;
+  border: 0.75rem solid #393298;
   border-radius: 2rem;
   padding: 1rem;
   outline: none;
@@ -774,8 +775,8 @@
 }
 
 .search__input {
-  width: 20rem;
-  padding: 12px 24px;
+  width: 15rem;
+  padding: 0.5rem 1rem;
   background-color: transparent;
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
@@ -784,14 +785,14 @@
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.1rem;
-  color: #3b4caa;
+  color: #393298;
   background-color: transparent;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 1.1rem 1.1rem;
   background-position: 95% center;
   border-radius: 50px;
-  border: 0.1rem solid #3b4caa;
+  border: 0.1rem solid #393298;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
   -webkit-backface-visibility: hidden;
@@ -801,30 +802,30 @@
 }
 
 .search__input::-webkit-input-placeholder {
-  color: color(#3b4caa a(0.8));
+  color: color(#393298 a(0.8));
   letter-spacing: 1.5px;
 }
 
 .search__input:-ms-input-placeholder {
-  color: color(#3b4caa a(0.8));
+  color: color(#393298 a(0.8));
   letter-spacing: 1.5px;
 }
 
 .search__input::-ms-input-placeholder {
-  color: color(#3b4caa a(0.8));
+  color: color(#393298 a(0.8));
   letter-spacing: 1.5px;
 }
 
 .search__input::placeholder {
-  color: color(#3b4caa a(0.8));
+  color: color(#393298 a(0.8));
   letter-spacing: 1.5px;
 }
 
 .search__input:hover, .search__input:focus {
-  padding: 12px 0;
+  padding: 0.5rem 0;
   outline: 0;
   border: 1px solid transparent;
-  border-bottom: 1px solid #3b4caa;
+  border-bottom: 1px solid #393298;
   border-radius: 0;
   background-position: 100% center;
 }
@@ -1014,7 +1015,7 @@ button {
   border-radius: 1rem;
   color: white;
   border: none;
-  background-color: #3b4caa;
+  background-color: #393298;
   text-shadow: 1px 1px 2px black;
 }
 
@@ -1064,9 +1065,9 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #536aeb;
+  background-color: #3b4caa;
   height: 100vh;
-  background: linear-gradient(120deg, #3b4caa 0% 5%, #536aeb 5% 10%, #f5eeeefa 10% 90%, #536aeb 90% 95%, #3b4caa 95% 100%);
+  background: linear-gradient(120deg, #393298 0% 5%, #3b4caa 5% 10%, #f5eeeefa 10% 90%, #3b4caa 90% 95%, #393298 95% 100%);
 }
 
 @media only screen and (max-width: 600px) {
