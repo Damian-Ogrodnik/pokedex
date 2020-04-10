@@ -11,7 +11,6 @@ export const fetchPokemon = (
     const response = await axios.get(url);
     if (category) {
       const pokemon = await response.data.pokemon.map(({ pokemon }) => pokemon);
-      console.log(pokemon);
       dispatch(actions.fetchSuccess(pokemon));
     } else {
       dispatch(actions.fetchSuccess(response.data.results));

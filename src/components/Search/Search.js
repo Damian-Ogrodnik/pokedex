@@ -33,9 +33,10 @@ export const Search = () => {
           placeholder="Select pokemon"
           className="search__types"
         >
+          <option hidden>-- Type --</option>
           {pokemonTypes.map((pokemonType) => (
             <option key={pokemonType} value={pokemonType}>
-              {pokemonType}
+              {pokemonType.toUpperCase()}
             </option>
           ))}
         </select>

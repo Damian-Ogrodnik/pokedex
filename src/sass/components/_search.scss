@@ -3,6 +3,7 @@
 .search {
   margin-right: 5rem;
   &__input {
+    height: 3rem;
     width: 15rem;
     padding: 0.5rem 1rem;
     background-color: transparent;
@@ -23,7 +24,7 @@
     transform-style: preserve-3d;
 
     &::placeholder {
-      color: color($second-background-color a(0.8));
+      color: $second-background-color;
       letter-spacing: 1.5px;
     }
 
@@ -37,6 +38,54 @@
       background-position: 100% center;
     }
   }
+
+  &__types {
+    margin-right: 2rem;
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: 0.1rem solid $second-background-color;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    border: 0.1rem solid $second-background-color;
+    color: $second-background-color;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; /* For IE <= 11 */
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease,
+      border-bottom-color 0.3s ease;
+
+    ::-ms-expand {
+      display: none;
+    }
+
+    &:hover,
+    :focus {
+      color: $second-background-color;
+      background-color: $second-color;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 0.5rem;
+      right: 8px;
+      width: 30px;
+      height: 36px;
+      pointer-events: none;
+      padding-left: 5px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -48,6 +97,15 @@
       font-size: 0.8rem;
       font-weight: 700;
       line-height: 1rem;
+    }
+
+    form {
+      @include flex-center-column;
+
+      select {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
