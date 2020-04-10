@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchPokemon, filterPokemon } from "../../redux/data/dataUtils";
-import { pokemonTypes } from "../../utils";
+import { filterPokemon } from "../../redux/data/dataUtils";
+import { SelectList } from "../SelectList";
 
 export const Search = () => {
   const [value, setValue] = useState("");
@@ -19,31 +19,14 @@ export const Search = () => {
     e.preventDefault();
   };
 
-  const handleChange = (value) => {
-    value === "all"
-      ? dispatch(fetchPokemon())
-      : dispatch(fetchPokemon(`https://pokeapi.co/api/v2/type/${value}`, true));
-  };
-
   return (
     <div className="search">
+      <SelectList />
       <form onSubmit={(e) => handleSubmit(e)}>
-        <select
-          onChange={(e) => handleChange(e.target.value)}
-          placeholder="Select pokemon"
-          className="search__types"
-        >
-          <option hidden>-- Type --</option>
-          {pokemonTypes.map((pokemonType) => (
-            <option key={pokemonType} value={pokemonType}>
-              {pokemonType.toUpperCase()}
-            </option>
-          ))}
-        </select>
         <input
           className="search__input"
           type="input"
-          placeholder="Search by Name"
+          placeholder="Search"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
