@@ -1,0 +1,20 @@
+.information {
+  @include flex-center-column;
+  position: absolute;
+  width: 15rem;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  img {
+    height: 7.5rem;
+  }
+  p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  :nth-child(3) {
+    font-size: 0.75rem;
+  }
+}

@@ -138,6 +138,42 @@
   }
 }
 
+.information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 15rem;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.information img {
+  height: 7.5rem;
+}
+
+.information p {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.information :nth-child(3) {
+  font-size: 0.75rem;
+}
+
 .loader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,6 +258,7 @@
 
 .pokemon-board {
   height: 80vh;
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;

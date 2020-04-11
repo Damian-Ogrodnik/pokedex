@@ -3,7 +3,7 @@ import * as types from "./dataTypes";
 const initialState = {
   pokemon: [],
   filteredPokemon: null,
-  loading: false,
+  loading: true,
   error: null,
 };
 
