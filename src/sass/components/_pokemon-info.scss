@@ -42,6 +42,19 @@
         justify-self: end;
         align-self: center;
         background: transparent;
+
+        @each $name, $invert, $sepia, $saturate, $hue, $brightness,
+          $contrast in $icon-filters
+        {
+          &.#{$name} {
+            filter: invert($invert)
+              sepia($sepia)
+              saturate($saturate)
+              hue-rotate($hue)
+              brightness($brightness)
+              contrast($contrast);
+          }
+        }
       }
     }
   }

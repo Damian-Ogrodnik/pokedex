@@ -45,7 +45,7 @@ export const PokemonModal = ({
     >
       <div className="pokemon-modal__details">
         <h2>{name.charAt(0).toUpperCase() + name.substring(1)}</h2>
-        <PokemonInfo data={{ name, pokemonStats, imgPath }} />
+        <PokemonInfo data={{ name, pokemonStats, imgPath, pokemonType }} />
         <PokemonAttributes types={types} openModal={openModal} />
         <div className="pokemon-modal__close">
           <button onClick={() => setOpenModal(false)}>X</button>

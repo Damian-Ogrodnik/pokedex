@@ -465,6 +465,96 @@
   background: transparent;
 }
 
+.pokemon-modal__main-info__stats img.poison {
+  -webkit-filter: invert(44%) sepia(14%) saturate(1971%) hue-rotate(260deg) brightness(91%) contrast(86%);
+          filter: invert(44%) sepia(14%) saturate(1971%) hue-rotate(260deg) brightness(91%) contrast(86%);
+}
+
+.pokemon-modal__main-info__stats img.grass {
+  -webkit-filter: invert(74%) sepia(42%) saturate(632%) hue-rotate(54deg) brightness(95%) contrast(79%);
+          filter: invert(74%) sepia(42%) saturate(632%) hue-rotate(54deg) brightness(95%) contrast(79%);
+}
+
+.pokemon-modal__main-info__stats img.ghost {
+  -webkit-filter: invert(44%) sepia(38%) saturate(904%) hue-rotate(201deg) brightness(86%) contrast(78%);
+          filter: invert(44%) sepia(38%) saturate(904%) hue-rotate(201deg) brightness(86%) contrast(78%);
+}
+
+.pokemon-modal__main-info__stats img.rock {
+  -webkit-filter: invert(76%) sepia(38%) saturate(421%) hue-rotate(11deg) brightness(84%) contrast(85%);
+          filter: invert(76%) sepia(38%) saturate(421%) hue-rotate(11deg) brightness(84%) contrast(85%);
+}
+
+.pokemon-modal__main-info__stats img.fighting {
+  -webkit-filter: invert(40%) sepia(43%) saturate(759%) hue-rotate(321deg) brightness(93%) contrast(92%);
+          filter: invert(40%) sepia(43%) saturate(759%) hue-rotate(321deg) brightness(93%) contrast(92%);
+}
+
+.pokemon-modal__main-info__stats img.fairy {
+  -webkit-filter: invert(86%) sepia(69%) saturate(1719%) hue-rotate(247deg) brightness(95%) contrast(95%);
+          filter: invert(86%) sepia(69%) saturate(1719%) hue-rotate(247deg) brightness(95%) contrast(95%);
+}
+
+.pokemon-modal__main-info__stats img.steel {
+  -webkit-filter: invert(81%) sepia(5%) saturate(697%) hue-rotate(201deg) brightness(85%) contrast(88%);
+          filter: invert(81%) sepia(5%) saturate(697%) hue-rotate(201deg) brightness(85%) contrast(88%);
+}
+
+.pokemon-modal__main-info__stats img.ground {
+  -webkit-filter: invert(87%) sepia(54%) saturate(665%) hue-rotate(325deg) brightness(92%) contrast(86%);
+          filter: invert(87%) sepia(54%) saturate(665%) hue-rotate(325deg) brightness(92%) contrast(86%);
+}
+
+.pokemon-modal__main-info__stats img.psychic {
+  -webkit-filter: invert(46%) sepia(52%) saturate(1689%) hue-rotate(307deg) brightness(103%) contrast(101%);
+          filter: invert(46%) sepia(52%) saturate(1689%) hue-rotate(307deg) brightness(103%) contrast(101%);
+}
+
+.pokemon-modal__main-info__stats img.ice {
+  -webkit-filter: invert(66%) sepia(85%) saturate(513%) hue-rotate(173deg) brightness(102%) contrast(101%);
+          filter: invert(66%) sepia(85%) saturate(513%) hue-rotate(173deg) brightness(102%) contrast(101%);
+}
+
+.pokemon-modal__main-info__stats img.electric {
+  -webkit-filter: invert(96%) sepia(8%) saturate(5260%) hue-rotate(331deg) brightness(92%) contrast(95%);
+          filter: invert(96%) sepia(8%) saturate(5260%) hue-rotate(331deg) brightness(92%) contrast(95%);
+}
+
+.pokemon-modal__main-info__stats img.dark {
+  -webkit-filter: invert(31%) sepia(56%) saturate(338%) hue-rotate(336deg) brightness(95%) contrast(82%);
+          filter: invert(31%) sepia(56%) saturate(338%) hue-rotate(336deg) brightness(95%) contrast(82%);
+}
+
+.pokemon-modal__main-info__stats img.normal {
+  -webkit-filter: invert(82%) sepia(6%) saturate(547%) hue-rotate(22deg) brightness(83%) contrast(85%);
+          filter: invert(82%) sepia(6%) saturate(547%) hue-rotate(22deg) brightness(83%) contrast(85%);
+}
+
+.pokemon-modal__main-info__stats img.bug {
+  -webkit-filter: invert(68%) sepia(71%) saturate(465%) hue-rotate(23deg) brightness(91%) contrast(93%);
+          filter: invert(68%) sepia(71%) saturate(465%) hue-rotate(23deg) brightness(91%) contrast(93%);
+}
+
+.pokemon-modal__main-info__stats img.water {
+  -webkit-filter: invert(51%) sepia(99%) saturate(1701%) hue-rotate(188deg) brightness(101%) contrast(96%);
+          filter: invert(51%) sepia(99%) saturate(1701%) hue-rotate(188deg) brightness(101%) contrast(96%);
+}
+
+.pokemon-modal__main-info__stats img.dragon {
+  -webkit-filter: invert(40%) sepia(69%) saturate(790%) hue-rotate(213deg) brightness(96%) contrast(94%);
+          filter: invert(40%) sepia(69%) saturate(790%) hue-rotate(213deg) brightness(96%) contrast(94%);
+}
+
+.pokemon-modal__main-info__stats img.flying {
+  -webkit-filter: invert(67%) sepia(19%) saturate(6403%) hue-rotate(201deg) brightness(100%) contrast(103%);
+          filter: invert(67%) sepia(19%) saturate(6403%) hue-rotate(201deg) brightness(100%) contrast(103%);
+}
+
+.pokemon-modal__main-info__stats img.fire {
+  -webkit-filter: invert(38%) sepia(85%) saturate(3793%) hue-rotate(348deg) brightness(101%) contrast(101%);
+          filter: invert(38%) sepia(85%) saturate(3793%) hue-rotate(348deg) brightness(101%) contrast(101%);
+}
+
 .pokemon-modal {
   position: absolute;
   width: 45%;
