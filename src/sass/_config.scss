@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,16 +20,8 @@
 
 .App {
   @include flex-center;
-  background-color: $background-color;
+  background-color: $third-background-color;
   height: 100vh;
-  background: linear-gradient(
-    120deg,
-    $second-background-color 0% 5%,
-    $background-color 5% 10%,
-    $third-background-color 10% 90%,
-    $background-color 90% 95%,
-    $second-background-color 95% 100%
-  );
   @media only screen and (max-width: 600px) {
     height: 100%;
   }

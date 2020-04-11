@@ -1,3 +1,4 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 @-webkit-keyframes scaleCardUp {
   0% {
     -webkit-transform: scale(1);
@@ -8,7 +9,6 @@
             transform: scale(1.2);
   }
 }
-
 @keyframes scaleCardUp {
   0% {
     -webkit-transform: scale(1);
@@ -69,6 +69,166 @@
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slide {
+  100% {
+    -webkit-transform: translateX(-85%);
+            transform: translateX(-85%);
+  }
+}
+
+@keyframes slide {
+  100% {
+    -webkit-transform: translateX(-85%);
+            transform: translateX(-85%);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  100% {
+    -webkit-transform: translateX(85%);
+            transform: translateX(85%);
+  }
+}
+
+@keyframes slide-right {
+  100% {
+    -webkit-transform: translateX(85%);
+            transform: translateX(85%);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideInFromBotton {
+  0% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+  }
+}
+
+@keyframes slideInFromBotton {
+  0% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+  }
+}
+
+@-webkit-keyframes slideOutToBotton {
+  100% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+  }
+}
+
+@keyframes slideOutToBotton {
+  100% {
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
+  }
+}
+
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+}
+
+@-webkit-keyframes slideOutToTop {
+  100% {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+}
+
+@keyframes slideOutToTop {
+  100% {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh);
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes backgroundOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes backgroundOut {
+  100% {
+    opacity: 0;
   }
 }
 
@@ -1152,6 +1312,108 @@
   }
 }
 
+.welcome {
+  z-index: 1;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f5eeeefa;
+}
+
+.welcome p {
+  color: #ffce31;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.95);
+  font-family: "Pokemon";
+  letter-spacing: 0.25rem;
+  font-size: 4rem;
+}
+
+.welcome__header--down {
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  -webkit-animation: slideInFromBotton 3s;
+          animation: slideInFromBotton 3s;
+}
+
+.welcome__header--down.out {
+  -webkit-animation: fadeOut 2s;
+          animation: fadeOut 2s;
+  -webkit-animation: slideOutToBotton 2s;
+          animation: slideOutToBotton 2s;
+}
+
+.welcome__header--up {
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+  -webkit-animation: slideInFromTop 3s;
+          animation: slideInFromTop 3s;
+}
+
+.welcome__header--up.out {
+  -webkit-animation: fadeOut 2s;
+          animation: fadeOut 2s;
+  -webkit-animation: slideOutToTop 2s;
+          animation: slideOutToTop 2s;
+}
+
+.welcome__img {
+  -webkit-animation: scale 3s;
+          animation: scale 3s;
+  height: 15rem;
+}
+
+.welcome__img.out {
+  -webkit-animation: scaleOut 2s;
+          animation: scaleOut 2s;
+}
+
+.welcome.out {
+  -webkit-animation: backgroundOut 2s;
+          animation: backgroundOut 2s;
+}
+
+.curtain {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.curtain__left {
+  -webkit-animation: slide 2s;
+          animation: slide 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+          clip-path: polygon(0 0, 0 100%, 100% 0);
+  background-color: #393298;
+}
+
+.curtain__right {
+  -webkit-animation: slide-right 2s;
+          animation: slide-right 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background-color: #393298;
+}
+
 button {
   font-size: 1rem;
   padding: 0.5rem;
@@ -1210,9 +1472,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #3b4caa;
+  background-color: #f5eeeefa;
   height: 100vh;
-  background: linear-gradient(120deg, #393298 0% 5%, #3b4caa 5% 10%, #f5eeeefa 10% 90%, #3b4caa 90% 95%, #393298 95% 100%);
 }
 
 @media only screen and (max-width: 600px) {

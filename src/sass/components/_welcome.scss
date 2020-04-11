@@ -1,0 +1,72 @@
+.welcome {
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $third-background-color;
+
+  p {
+    color: $second-color;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.95);
+    font-family: "Pokemon";
+    letter-spacing: 0.25rem;
+    font-size: 4rem;
+  }
+  &__header {
+    &--down {
+      animation: fadeIn 3s;
+      animation: slideInFromBotton 3s;
+      &.out {
+        animation: fadeOut 2s;
+        animation: slideOutToBotton 2s;
+      }
+    }
+    &--up {
+      animation: fadeIn 3s;
+      animation: slideInFromTop 3s;
+
+      &.out {
+        animation: fadeOut 2s;
+        animation: slideOutToTop 2s;
+      }
+    }
+  }
+  &__img {
+    animation: scale 3s;
+    height: 15rem;
+    &.out {
+      animation: scaleOut 2s;
+    }
+  }
+
+  &.out {
+    animation: backgroundOut 2s;
+  }
+}
+
+.curtain {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  &__left {
+    animation: slide 2s;
+    animation-fill-mode: forwards;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background-color: $second-background-color;
+  }
+
+  &__right {
+    animation: slide-right 2s;
+    animation-fill-mode: forwards;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    background-color: $second-background-color;
+  }
+}
