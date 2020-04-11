@@ -15,12 +15,12 @@ export const PokemonAttributes = ({ types, openModal }) => {
   }, [openModal, types]);
 
   return (
-    <div className="pokemon-modal__strengths-weaknesses">
-      <div className="pokemon-modal__strengths-weaknesses--category">
+    <div className="pokemon-modal__attributes">
+      <div className="pokemon-modal__attributes--category">
         <h3>STRENGTHS</h3>
         <TypeInfo types={attributes.strengths} name="details" />
       </div>
-      <div className="pokemon-modal__strengths-weaknesses--category">
+      <div className="pokemon-modal__attributes--category">
         <h3>WEAKNESSES</h3>
         <TypeInfo types={attributes.weaknesses} name="details" />
       </div>

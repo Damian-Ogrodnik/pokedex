@@ -256,6 +256,36 @@
   }
 }
 
+.pokemon-modal__attributes {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.pokemon-modal__attributes h3 {
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.75rem;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+
+.pokemon-modal__attributes::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #2b2d42;
+}
+
 .pokemon-board {
   height: 80vh;
   position: relative;
@@ -354,39 +384,6 @@
   width: 8rem;
 }
 
-.pokemon-modal {
-  position: absolute;
-  width: 45%;
-  height: auto;
-  max-height: 95%;
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background-color: #f5eeeefa;
-  border: 0.75rem solid #393298;
-  border-radius: 2rem;
-  padding: 1rem;
-  outline: none;
-}
-
-.pokemon-modal__details {
-  height: 100%;
-  width: 100%;
-}
-
-.pokemon-modal__details h2 {
-  position: relative;
-  text-align: center;
-  font-size: 3rem;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  margin-bottom: 1rem;
-}
-
 .pokemon-modal__main-info {
   position: relative;
   padding-top: 1.5rem;
@@ -468,34 +465,37 @@
   background: transparent;
 }
 
-.pokemon-modal__strengths-weaknesses {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+.pokemon-modal {
+  position: absolute;
+  width: 45%;
+  height: auto;
+  max-height: 95%;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #f5eeeefa;
+  border: 0.75rem solid #393298;
+  border-radius: 2rem;
+  padding: 1rem;
+  outline: none;
 }
 
-.pokemon-modal__strengths-weaknesses h3 {
+.pokemon-modal__details {
+  height: 100%;
   width: 100%;
-  margin-top: 2rem;
-  font-size: 1.75rem;
+}
+
+.pokemon-modal__details h2 {
+  position: relative;
+  text-align: center;
+  font-size: 3rem;
   color: white;
   text-shadow: 1px 1px 2px black;
-  text-align: center;
-}
-
-.pokemon-modal__strengths-weaknesses::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  right: 0;
-  top: 0rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin: auto;
-  width: 100%;
-  border: 1px solid #2b2d42;
+  margin-bottom: 1rem;
 }
 
 .pokemon-modal__close {

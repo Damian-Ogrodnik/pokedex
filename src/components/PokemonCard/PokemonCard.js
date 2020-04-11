@@ -42,13 +42,15 @@ export const PokemonCard = ({ name, url }) => {
               <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
               <button onClick={() => setOpenModal(true)}>Details</button>
             </div>
-            <PokemonModal
-              name={name}
-              imgPath={imgPath}
-              openModal={openModal}
-              setOpenModal={setOpenModal}
-              {...response}
-            />
+            {openModal && (
+              <PokemonModal
+                name={name}
+                imgPath={imgPath}
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+                {...response}
+              />
+            )}
           </div>
         );
       }}
