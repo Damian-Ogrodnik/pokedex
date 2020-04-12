@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import pokeballImg from "../../assets/pokeball.png";
 
-export const Welcome = () => {
+export const WelcomeScreen = () => {
   const [isOpen, setOpen] = useState(true);
   const [isOut, setOut] = useState("");
 
