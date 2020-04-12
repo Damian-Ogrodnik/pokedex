@@ -4,6 +4,7 @@ import { useFetch } from "../../custom-hooks";
 import questionMarkImg from "../../assets/question-mark.png";
 
 import { Loader } from "../Loader";
+import { Error } from "../Error";
 import { PokemonModal } from "../PokemonModal";
 import { TypeInfo } from "../TypeInfo";
 
@@ -29,31 +30,27 @@ export const PokemonCard = ({ name, url }) => {
       : setImgPath(questionMarkImg);
   }, [response.sprites.front_default]);
 
-  return (
-    <Loader
-      error={error}
-      loading={loading}
-      render={() => {
-        return (
-          <div className="pokemon-card">
-            <TypeInfo types={response.types} />
-            <img src={imgPath} alt={`pokemon ${name}`} />
-            <div className="pokemon-card__details">
-              <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
-              <button onClick={() => setOpenModal(true)}>Details</button>
-            </div>
-            {openModal && (
-              <PokemonModal
-                name={name}
-                imgPath={imgPath}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-                {...response}
-              />
-            )}
-          </div>
-        );
-      }}
-    />
+  return error ? (
+    <Error />
+  ) : loading ? (
+    <Loader />
+  ) : (
+    <div className="pokemon-card">
+      <TypeInfo types={response.types} />
+      <img src={imgPath} alt={`pokemon ${name}`} />
+      <div className="pokemon-card__details">
+        <p>{name.charAt(0).toUpperCase() + name.substring(1)}</p>
+        <button onClick={() => setOpenModal(true)}>Details</button>
+      </div>
+      {openModal && (
+        <PokemonModal
+          name={name}
+          imgPath={imgPath}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+          {...response}
+        />
+      )}
+    </div>
   );
 };

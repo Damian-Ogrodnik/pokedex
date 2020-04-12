@@ -1,26 +1,11 @@
 import React from "react";
-import { IconContext } from "react-icons";
-import { MdError } from "react-icons/md";
 
 import pokeballImg from "../../assets/pokeball.png";
 
-export const Loader = ({ loading, error, render }) => {
+export const Loader = () => {
   return (
-    <>
-      {error ? (
-        <div className="error">
-          <IconContext.Provider value={{ className: "error__icon" }}>
-            <MdError />
-          </IconContext.Provider>
-          <p>Something went wrong...</p>
-        </div>
-      ) : loading ? (
-        <div className="loader">
-          <img src={pokeballImg} alt="pokeball" />
-        </div>
-      ) : (
-        render()
-      )}
-    </>
+    <div className="loader">
+      <img src={pokeballImg} alt="pokeball" />
+    </div>
   );
 };
