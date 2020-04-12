@@ -10,7 +10,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        {/* <WelcomeScreen /> */}
+        <WelcomeScreen />
         <Pokedex />
       </div>
     </Provider>

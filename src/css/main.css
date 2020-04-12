@@ -1052,6 +1052,13 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .pokemon-modal {
+    width: 75%;
+    padding: 0.5rem;
+  }
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
