@@ -8,14 +8,12 @@ import { Information } from "../Information";
 import { PokemonCard } from "../PokemonCard";
 
 const PokemonBoard = () => {
-  const paginatedPokemonArray = useSelector(
-    ({ pagination }) => pagination.paginatedPokemon
-  );
+  const { paginatedPokemon } = useSelector(({ pagination }) => pagination);
 
   return (
     <div className="pokemon-board">
-      {paginatedPokemonArray.length ? (
-        paginatedPokemonArray.map(({ name, url }) => (
+      {paginatedPokemon.length ? (
+        paginatedPokemon.map(({ name, url }) => (
           <PokemonCard key={name} name={name} url={url} />
         ))
       ) : (

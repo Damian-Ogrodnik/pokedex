@@ -6,7 +6,7 @@ import { SelectList } from "../SelectList";
 
 export const Search = () => {
   const [value, setValue] = useState("");
-  const pokemon = useSelector(({ data }) => data.pokemon);
+  const { pokemon } = useSelector(({ data }) => data);
   const dispatch = useDispatch();
 
   useEffect(() => {

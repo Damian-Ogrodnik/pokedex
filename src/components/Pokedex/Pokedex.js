@@ -9,7 +9,7 @@ import { Pagination } from "../Pagination";
 import { PokemonBoard } from "../PokemonBoard/PokemonBoard";
 
 export const Pokedex = () => {
-  const { loading, error, pokemonArray, filteredPokemon } = useSelector(
+  const { error, loading, pokemonArray, filteredPokemon } = useSelector(
     ({ data }) => data
   );
   const dispatch = useDispatch();
