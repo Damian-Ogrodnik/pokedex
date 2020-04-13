@@ -22,9 +22,9 @@ export const WelcomeScreen = () => {
         <p className={`welcome ${isOut}`}>
           <p className={`welcome__header--up ${isOut}`}>Pokedex</p>
           <img
+            alt="Pokeball"
             className={`welcome__img ${isOut}`}
             src={pokeballImg}
-            alt="Pokeball"
           />
           <p className={`welcome__header--down ${isOut}`}>Welcome</p>
         </p>

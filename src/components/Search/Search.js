@@ -25,10 +25,10 @@ export const Search = () => {
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
           className="search__input"
-          type="input"
-          placeholder="Search"
-          value={value}
           onChange={(e) => setValue(e.target.value)}
+          placeholder="Search"
+          type="input"
+          value={value}
         />
       </form>
     </div>

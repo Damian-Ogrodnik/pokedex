@@ -1,11 +1,11 @@
 import React from "react";
 
-export const TypeInfo = ({ types, name = "" }) => {
+export const TypeInfo = ({ name = "", types }) => {
   return (
     <div className={`pokemon-types ${name}`}>
       {types &&
         types.map(({ type }) => (
-          <div key={type.name} className={`pokemon-type ${type.name} ${name}`}>
+          <div className={`pokemon-type ${type.name} ${name}`} key={type.name}>
             {type.name}
           </div>
         ))}

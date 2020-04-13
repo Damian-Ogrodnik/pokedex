@@ -5,20 +5,20 @@ import { statsData } from "../../utils";
 import { PokemonStats } from "../PokemonStats";
 
 export const PokemonInfo = ({
-  data: { name, pokemonStats, imgPath, pokemonType },
+  data: { imgPath, name, pokemonStats, pokemonType },
 }) => {
   return (
     <div className="pokemon-modal__main-info">
-      {statsData.map(([icon, text, position = "left", types = false]) => (
+      {statsData.map(([icon, text, position = "left"]) => (
         <PokemonStats
-          key={name + pokemonStats[text]}
-          text={pokemonStats[text]}
           icon={icon}
-          position={position}
+          key={name + pokemonStats[text]}
           pokemonType={pokemonType}
+          position={position}
+          text={pokemonStats[text]}
         />
       ))}
-      <img src={imgPath} alt={`pokemon ${name}`} />
+      <img alt={`pokemon ${name}`} src={imgPath} />
     </div>
   );
 };

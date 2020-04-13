@@ -7,7 +7,7 @@ import { Search } from "../Search";
 export const Header = () => {
   return (
     <div className="header">
-      <img className="header__logo" src={pokedexImg} alt="pokedex logo" />
+      <img alt="pokedex logo" className="header__logo" src={pokedexImg} />
       <Search />
     </div>
   );

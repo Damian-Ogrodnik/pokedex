@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 
-import { PokemonInfo } from "../PokemonInfo";
 import { PokemonAttributes } from "../PokemonAttributes";
+import { PokemonInfo } from "../PokemonInfo";
 
 export const PokemonModal = ({
-  name,
   imgPath,
-  types,
+  name,
   openModal,
   setOpenModal,
   stats,
+  types,
   ...props
 }) => {
   const [pokemonStats, setPokemonStats] = useState({ types, ...props });
@@ -38,15 +38,15 @@ export const PokemonModal = ({
 
   return (
     <Modal
-      isOpen={openModal}
-      contentLabel="Pokemon Modal"
       className={`pokemon-modal ${pokemonType}`}
+      contentLabel="Pokemon Modal"
+      isOpen={openModal}
       overlayClassName="overlay"
     >
       <div className="pokemon-modal__details">
         <h2>{name.charAt(0).toUpperCase() + name.substring(1)}</h2>
-        <PokemonInfo data={{ name, pokemonStats, imgPath, pokemonType }} />
-        <PokemonAttributes types={types} openModal={openModal} />
+        <PokemonInfo data={{ imgPath, name, pokemonStats, pokemonType }} />
+        <PokemonAttributes openModal={openModal} types={types} />
         <div className="pokemon-modal__close">
           <button onClick={() => setOpenModal(false)}>X</button>
         </div>

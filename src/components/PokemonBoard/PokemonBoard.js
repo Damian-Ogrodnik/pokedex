@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 
 import pikachuImg from "../../assets/pikachu.png";
 
-import { PokemonCard } from "../PokemonCard";
 import { Information } from "../Information";
+import { PokemonCard } from "../PokemonCard";
 
 export const PokemonBoard = () => {
   const paginatedPokemonArray = useSelector(
@@ -19,9 +19,9 @@ export const PokemonBoard = () => {
         ))
       ) : (
         <Information
-          text="Nothing Found..."
-          secondText={"Try to search another name :) "}
           imgPath={pikachuImg}
+          secondText={"Try to search another name :) "}
+          text="Nothing Found..."
         />
       )}
     </div>
