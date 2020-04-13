@@ -49,24 +49,3 @@
     }
   }
 }
-
-@media only screen and (max-width: 560px) {
-  .pokemon-card {
-    width: 15rem;
-    height: 20rem;
-    img {
-      height: 12rem;
-    }
-
-    &__details {
-      p {
-        margin-top: 0.75rem;
-      }
-      height: 7rem;
-      button {
-        margin-top: 0.5rem;
-        width: 8rem;
-      }
-    }
-  }
-}

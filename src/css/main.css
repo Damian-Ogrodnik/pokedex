@@ -464,7 +464,7 @@
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 500px) {
   .pokemon-board {
     height: 80vh;
     -ms-grid-columns: 1fr 1fr;
@@ -542,26 +542,6 @@
 
 .pokemon-card__details button {
   width: 8rem;
-}
-
-@media only screen and (max-width: 560px) {
-  .pokemon-card {
-    width: 15rem;
-    height: 20rem;
-  }
-  .pokemon-card img {
-    height: 12rem;
-  }
-  .pokemon-card__details {
-    height: 7rem;
-  }
-  .pokemon-card__details p {
-    margin-top: 0.75rem;
-  }
-  .pokemon-card__details button {
-    margin-top: 0.5rem;
-    width: 8rem;
-  }
 }
 
 .pokemon-modal__main-info {
@@ -1318,10 +1298,7 @@
   background-color: #ff4422;
 }
 
-@media only screen and (max-width: 560px) {
-  .pokemon-types {
-    height: 3rem;
-  }
+@media only screen and (max-width: 500px) {
   .pokemon-types.type :first-child {
     position: absolute;
     height: 1.5rem;
@@ -1333,9 +1310,6 @@
     width: 4.5rem;
     height: 1.5rem;
     top: 0.5rem;
-  }
-  .pokemon-type {
-    margin-top: 0.75rem;
   }
   .pokemon-type.details {
     width: 60%;
