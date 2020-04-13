@@ -15,9 +15,9 @@ export const Pagination = ({ pokemonArray }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (windowWidth < 768 && windowWidth > 500) {
+    if (windowWidth < 768 && windowWidth > 560) {
       setPokemonOnPage(8);
-    } else if (windowWidth < 500) {
+    } else if (windowWidth < 560) {
       setPokemonOnPage(4);
     } else {
       setPokemonOnPage(10);
