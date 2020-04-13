@@ -7,7 +7,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { paginatePokemon } from "../../redux/pagination/paginationUtils";
 import { useWindowSize } from "../../custom-hooks";
 
-export const Pagination = ({ pokemonArray }) => {
+export const Pagination = ({ loading, pokemonArray }) => {
   const [active, setActive] = useState(1);
   const [pageNumbers, setPageNumbers] = useState([]);
   const [pokemonOnPage, setPokemonOnPage] = useState(10);
@@ -45,8 +45,10 @@ export const Pagination = ({ pokemonArray }) => {
   }, [pokemonArray, pokemonOnPage]);
 
   const paginate = (pageNumber) => {
-    dispatch(paginatePokemon(pageNumber, pokemonArray, pokemonOnPage));
-    setActive(pageNumber);
+    if (!loading) {
+      dispatch(paginatePokemon(pageNumber, pokemonArray, pokemonOnPage));
+      setActive(pageNumber);
+    }
   };
 
   const pageUp = () => {

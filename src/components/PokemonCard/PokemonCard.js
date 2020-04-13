@@ -31,7 +31,7 @@ export const PokemonCard = ({ name, url }) => {
   }, [response.sprites.front_default]);
 
   return error ? (
-    <Error />
+    <Error name="" />
   ) : loading ? (
     <Loader />
   ) : (

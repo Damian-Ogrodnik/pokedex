@@ -259,6 +259,10 @@
   color: #393298;
 }
 
+.error.main {
+  margin-top: 10rem;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

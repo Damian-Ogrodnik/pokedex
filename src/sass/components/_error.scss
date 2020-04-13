@@ -10,4 +10,8 @@
   p {
     color: $second-background-color;
   }
+
+  &.main {
+    margin-top: 10rem;
+  }
 }

@@ -2,11 +2,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import pikachuImg from "../../assets/pikachu.png";
+import { withLoading } from "../withLoading";
 
 import { Information } from "../Information";
 import { PokemonCard } from "../PokemonCard";
 
-export const PokemonBoard = () => {
+const PokemonBoard = () => {
   const paginatedPokemonArray = useSelector(
     ({ pagination }) => pagination.paginatedPokemon
   );
@@ -27,3 +28,6 @@ export const PokemonBoard = () => {
     </div>
   );
 };
+
+const pokemonBoardWithLoading = withLoading(PokemonBoard);
+export { pokemonBoardWithLoading as PokemonBoard };
