@@ -464,7 +464,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 560px) {
   .pokemon-board {
     height: 80vh;
     -ms-grid-columns: 1fr 1fr;
