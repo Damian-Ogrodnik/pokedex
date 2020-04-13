@@ -1158,7 +1158,6 @@
 .pokemon-types {
   background-color: white;
   height: 2rem;
-  top: 0rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1176,6 +1175,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding-bottom: 0.2rem;
 }
 
 .pokemon-types.details {
@@ -1303,12 +1303,12 @@
     position: absolute;
     height: 1.5rem;
     width: 4.5rem;
-    height: auto;
+    padding: 0rem;
   }
   .pokemon-types.type :nth-child(2) {
     position: absolute;
-    width: 4.5rem;
     height: 1.5rem;
+    width: 4.5rem;
     top: 0.5rem;
   }
   .pokemon-type.details {
