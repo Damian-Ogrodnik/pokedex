@@ -16,14 +16,12 @@ export const PokemonAttributes = ({ openModal, types }) => {
 
   return (
     <div className="pokemon-modal__attributes">
-      <div className="pokemon-modal__attributes--category">
-        <h3>STRENGTHS</h3>
-        <TypeInfo name="details" types={attributes.strengths} />
-      </div>
-      <div className="pokemon-modal__attributes--category">
-        <h3>WEAKNESSES</h3>
-        <TypeInfo name="details" types={attributes.weaknesses} />
-      </div>
+      {Object.entries(attributes).map(([name, value]) => (
+        <div className="pokemon-modal__attributes--category" key={name}>
+          <h3>{name.toUpperCase()}</h3>
+          <TypeInfo name="details" types={value} />
+        </div>
+      ))}
     </div>
   );
 };

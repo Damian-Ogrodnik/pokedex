@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const getDamageInfo = async (urlArray) => {
-  const weaknesses = [];
   const strengths = [];
+  const weaknesses = [];
 
   await axios
     .get(urlArray[0].type.url)
@@ -18,5 +18,5 @@ export const getDamageInfo = async (urlArray) => {
     })
     .catch((err) => console.log(err));
 
-  return { weaknesses, strengths };
+  return { strengths, weaknesses };
 };
