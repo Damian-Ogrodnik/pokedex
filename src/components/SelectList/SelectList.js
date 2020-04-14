@@ -19,7 +19,7 @@ export const SelectList = () => {
       className={"select-list"}
       onChange={({ value }) => handleChange(value)}
       options={pokemonTypes}
-      placeholder={"Pokemon"}
+      placeholder={"Type"}
       styles={customSelectStyles}
     />
   );
