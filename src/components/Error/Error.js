@@ -5,11 +5,11 @@ import { MdError } from "react-icons/md";
 
 export const Error = ({ msg = "Something went wrong...", name = "main" }) => {
   return (
-    <div className={`error ${name}`}>
+    <div className={`error ${name}`} data-testid="container">
       <IconContext.Provider value={{ className: "error__icon" }}>
-        <MdError />
+        <MdError  data-testid="icon"/>
       </IconContext.Provider>
-      <p>{msg}</p>
+      <p data-testid="message">{msg}</p>
     </div>
   );
 };
