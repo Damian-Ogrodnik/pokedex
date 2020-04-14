@@ -2,7 +2,11 @@
   @include flex-center;
 
   &__item {
-    margin: 0 0.5rem;
+    margin: 0 0.25rem;
+
+    button {
+      width: 2.5rem;
+    }
 
     &.active {
       button {
@@ -10,8 +14,15 @@
         border: 0.25rem solid $second-color;
         color: $second-color;
         font-weight: 700;
+        width: 3rem;
       }
     }
+  }
+
+  &__arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: $second-background-color;
   }
 
   &__wrapper {
@@ -23,6 +34,14 @@
   .pagination {
     &__item {
       margin: 0 0.15rem;
+      button {
+        width: auto;
+      }
+      &.active {
+        button {
+          width: auto;
+        }
+      }
     }
   }
 }

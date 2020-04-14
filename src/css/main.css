@@ -378,7 +378,11 @@
 }
 
 .pagination__item {
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
+}
+
+.pagination__item button {
+  width: 2.5rem;
 }
 
 .pagination__item.active button {
@@ -386,6 +390,13 @@
   border: 0.25rem solid #ffce31;
   color: #ffce31;
   font-weight: 700;
+  width: 3rem;
+}
+
+.pagination__arrow {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #393298;
 }
 
 .pagination__wrapper {
@@ -403,6 +414,12 @@
 @media only screen and (max-width: 500px) {
   .pagination__item {
     margin: 0 0.15rem;
+  }
+  .pagination__item button {
+    width: auto;
+  }
+  .pagination__item.active button {
+    width: auto;
   }
 }
 
