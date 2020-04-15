@@ -1249,6 +1249,10 @@
   padding: 0.5rem;
 }
 
+.pokemon-type.type {
+  margin: 0.25rem 0rem 0.25rem 0.5rem;
+}
+
 .pokemon-type.poison {
   background-color: #aa5599;
 }

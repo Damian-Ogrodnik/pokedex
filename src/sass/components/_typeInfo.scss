@@ -41,6 +41,10 @@
     padding: 0.5rem;
   }
 
+  &.type {
+    margin: 0.25rem 0rem 0.25rem 0.5rem;
+  }
+
   @each $name, $color in $pokemon-types {
     &.#{$name} {
       background-color: $color;
