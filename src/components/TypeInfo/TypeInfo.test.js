@@ -8,7 +8,7 @@ const types = [{ type: { name: "grass" } }, { type: { name: "fire" } }];
 
 afterEach(cleanup);
 
-describe("Error", () => {
+describe("TypeInfo", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(<TypeInfo />, div);

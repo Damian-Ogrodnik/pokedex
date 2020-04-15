@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { render, cleanup } from "@testing-library/react";
 
-import pokeballImg from "../../assets/pokeball.png";
-
 import { Loader } from "./index";
 
 afterEach(cleanup);

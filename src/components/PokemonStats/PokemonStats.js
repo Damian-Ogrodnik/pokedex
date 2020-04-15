@@ -9,9 +9,12 @@ export const PokemonStats = ({
   text,
 }) => {
   return (
-    <div className={`pokemon-modal__main-info__stats grid__${position}`}>
+    <div
+      className={`pokemon-modal__main-info__stats grid__${position}`}
+      data-testid="container"
+    >
       {typeof text === "number" ? (
-        <p>{text}</p>
+        <p data-testid="text">{text}</p>
       ) : (
         <TypeInfo name="type" types={text} />
       )}

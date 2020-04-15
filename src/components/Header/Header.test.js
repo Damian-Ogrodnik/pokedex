@@ -21,7 +21,7 @@ const store = mockStore(initialState);
 
 afterEach(cleanup);
 
-describe("Error", () => {
+describe("Header", () => {
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
