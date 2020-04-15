@@ -11,7 +11,7 @@ const PokemonBoard = () => {
   const { paginatedPokemon } = useSelector(({ pagination }) => pagination);
 
   return (
-    <div className="pokemon-board">
+    <div className="pokemon-board" data-testid="pokemon-board">
       {paginatedPokemon.length ? (
         paginatedPokemon.map(({ name, url }) => (
           <PokemonCard key={name} name={name} url={url} />

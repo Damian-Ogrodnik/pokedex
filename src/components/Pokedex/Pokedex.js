@@ -6,7 +6,7 @@ import { fetchPokemon } from "../../redux/data/dataUtils";
 
 import { Header } from "../Header";
 import { Pagination } from "../Pagination";
-import { PokemonBoard } from "../PokemonBoard/PokemonBoard";
+import { PokemonBoard } from "../PokemonBoard";
 
 export const Pokedex = () => {
   const { error, loading, pokemonArray, filteredPokemon } = useSelector(

@@ -8,7 +8,7 @@ import weightIcon from "../../assets/weight.png";
 
 afterEach(cleanup);
 
-describe("Error", () => {
+describe("PokemonStats", () => {
   const pokemonData = { icon: weightIcon, pokemonType: "grass", text: 20 };
   const pokemonData2 = {
     icon: weightIcon,
@@ -28,7 +28,7 @@ describe("Error", () => {
         text={pokemonData.text}
       />
     );
-    expect(getByTestId("container").children.length).toBe(2);
+    expect(getByTestId("pokemon-modal").children.length).toBe(2);
   });
   it("renders proper values", () => {
     const { getByTestId } = render(

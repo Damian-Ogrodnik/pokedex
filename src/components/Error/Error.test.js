@@ -21,6 +21,6 @@ describe("Error", () => {
   });
   it("renders all elements", () => {
     const { getByTestId } = render(<Error msg="Error message" />);
-    expect(getByTestId("container").children.length).toBe(2);
+    expect(getByTestId("error").children.length).toBe(2);
   });
 });

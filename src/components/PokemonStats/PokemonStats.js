@@ -11,7 +11,7 @@ export const PokemonStats = ({
   return (
     <div
       className={`pokemon-modal__main-info__stats grid__${position}`}
-      data-testid="container"
+      data-testid="pokemon-modal"
     >
       {typeof text === "number" ? (
         <p data-testid="text">{text}</p>

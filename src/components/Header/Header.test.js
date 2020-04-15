@@ -45,6 +45,6 @@ describe("Header", () => {
         <Header />{" "}
       </Provider>
     );
-    expect(getByTestId("container").children.length).toBe(2);
+    expect(getByTestId("header").children.length).toBe(2);
   });
 });

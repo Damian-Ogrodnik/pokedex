@@ -15,7 +15,7 @@ describe("TypeInfo", () => {
   });
   it("renders all elements", () => {
     const { getByTestId } = render(<TypeInfo types={types} />);
-    expect(getByTestId("container").children.length).toBe(2);
+    expect(getByTestId("pokemon-types").children.length).toBe(2);
   });
   it("renders proper names", () => {
     const { getByText } = render(<TypeInfo types={types} />);
