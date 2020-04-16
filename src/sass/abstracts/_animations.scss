@@ -90,13 +90,6 @@
   }
 }
 
-@keyframes scaleOut {
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
 @keyframes backgroundOut {
   100% {
     opacity: 0;
